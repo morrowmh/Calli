@@ -1,3 +1,8 @@
 .DS_Store
-variables.json
+
 .venv/
+.mypy_cache/
+.ruff_cache/
+
+bot.toml
+responses.toml

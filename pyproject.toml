@@ -1,0 +1,26 @@
+[project]
+name = "calli"
+version = "0.1.0"
+description = "Discord bot for increasing server livelihood"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["discord>=2.3.2"]
+
+[dependency-groups]
+dev = ["mypy>=1.16.0", "ruff>=0.11.12"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "S", "UP"]
+ignore = ["E501", "F401"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
