@@ -1,25 +1,21 @@
-.PHONY: clean setup_dev setup lint fix format mypy start
+.PHONY: clean dev nodev check fix run
 
 clean:
 	rm -rf .venv .ruff_cache .mypy_cache
 
-setup_dev:
+dev:
 	uv sync
 
-setup:
+nodev:
 	uv sync --no-dev
 
-lint:
+check:
 	uv run ruff check .
+	mypy .
 
 fix:
 	uv run ruff check --fix .
-
-format:
 	uv run ruff format .
 
-mypy:
-	uv run mypy .
-
-start:
+run:
 	uv run python bot.py

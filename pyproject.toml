@@ -14,12 +14,23 @@ line-length = 100
 target-version = "py313"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "B", "S", "UP"]
+select = [
+    "A",   # builtins
+    "B",   # bugbear
+    "C4",  # comprehensions
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "RUF", # ruff
+    "S",   # bandit
+    "SIM", # simplify
+    "TRY", # tryceratops
+    "UP",  # pyupgrade
+]
 ignore = ["E501", "F401"]
 
 [tool.ruff.format]
 quote-style = "single"
-indent-style = "space"
 
 [tool.mypy]
 python_version = "3.13"
