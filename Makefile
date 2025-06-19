@@ -1,7 +1,7 @@
 .PHONY: clean dev nodev check fix run
 
 clean:
-	rm -rf .venv .ruff_cache .mypy_cache
+	rm -rf .venv .ruff_cache .mypy_cache __pycache__
 
 dev:
 	uv sync
@@ -18,4 +18,4 @@ fix:
 	uv run ruff format .
 
 run:
-	uv run python bot.py
+	uv run python calli.py

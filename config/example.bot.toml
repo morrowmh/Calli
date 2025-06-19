@@ -1,0 +1,19 @@
+# Rename this file to 'bot.toml' and modify its content accordingly
+# Developer portal: https://discord.com/developers
+
+[bot]
+token = ""     # Token from developer portal
+guild_id = "" # Right click server -> Copy Server ID
+
+[presence.activity]
+type = "playing" # Allowed values: playing, streaming, watching, listening, competing
+name = "with fire" # Displays as: Playing with fire
+
+[presence.status]
+type = "dnd" # Allowed values: idle, online, dnd, invisible, offline
+
+# Enable these in the developer portal
+[intents]
+presences = true
+message_content = true
+members = true
